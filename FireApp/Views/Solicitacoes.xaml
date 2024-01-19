@@ -2,11 +2,123 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FireApp.Views.Solicitacoes"
+             xmlns:custom="clr-namespace:FireApp.CustomControls"
              Title="Solicitacoes">
     <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+        <StackLayout HorizontalOptions="Center" Margin="0,30,0,0">
+            <HorizontalStackLayout Spacing="30" HorizontalOptions="Center">
+                <Image Source="fire_logo_cinza.png" HeightRequest="32" WidthRequest="115" />
+                <BoxView Color="#606060" Margin="0,0,0,0" HeightRequest="30" WidthRequest="1" />
+                <Image Source="rautaki_logo.png"  HeightRequest="32" WidthRequest="107"/>
+
+            </HorizontalStackLayout>
+            <HorizontalStackLayout Padding="20" HorizontalOptions="Center" Spacing="150" Margin="0,30,0,0">
+                <HorizontalStackLayout>
+                    <Image Source="icon_user.png" WidthRequest="12.44" HeightRequest="16" Margin="10"/>
+                    <VerticalStackLayout>
+                        <Label Text="Rodrigo Moreira" FontFamily="InterSemiBold" TextColor="#606060"/>
+                        <Label Text="Adm" TextColor="#606060"/>
+                    </VerticalStackLayout>
+                </HorizontalStackLayout>
+                <ImageButton Source="buger_ibo.png" WidthRequest="33" HeightRequest="23" Clicked="ImageButton_Clicked"/>
+
+            </HorizontalStackLayout>
+        </StackLayout>
+        <StackLayout>
+            <Grid>
+                <StackLayout BackgroundColor="#e8e8e9" HeightRequest="1000">
+                    <Image Source="bg_01.png" VerticalOptions="Start" />
+                    
+                </StackLayout>
+
+                <HorizontalStackLayout Grid.Column="0" ZIndex="2" Spacing="130" HorizontalOptions="Center" >
+                    
+                    <VerticalStackLayout  Padding="50,0,50,20" Spacing="5" Margin="0,40,0,0">
+                        
+                        <Grid ColumnDefinitions="150, 80, 50"  ColumnSpacing="10">
+                            <Label Text="Certidão:" FontFamily="InterSemiBold" FontSize="12" Padding="10,0"/>
+                            <Label Text="Tipo:" Grid.Column="1" FontFamily="InterSemiBold" FontSize="12"/>
+                            <Label Text="Status:" Grid.Column="2" FontFamily="InterSemiBold" FontSize="12"/>
+                        </Grid>
+                        <BoxView Color="#D9D9D9" Margin="0,0,0,0" HeightRequest="1" WidthRequest="200" />
+                        <CollectionView x:Name="collectionView"
+                                        x:FieldModifier="public"
+                                        ItemsSource="{Binding Solicitacoes}"
+                                        SelectionMode="None">
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <StackLayout Margin="0,5">
+                                        <Grid ColumnDefinitions="150, 85, 50" RowDefinitions="auto, auto" VerticalOptions="Center" ColumnSpacing="8">
+
+                                            <Frame Grid.Column="0" BackgroundColor="white" CornerRadius="2" HeightRequest="32" WidthRequest="151" Padding="3" BorderColor="white" Margin="5">
+                                                <Label Text="{Binding Descricao}" TextColor="Black" FontFamily="InterSemiBold" VerticalOptions="Center" Padding="10,0"/>
+                                            </Frame>
+
+                                            <Frame Grid.Column="1" BackgroundColor="white" CornerRadius="2" HeightRequest="32" WidthRequest="85" Padding="3" BorderColor="white">
+                                                <Label Text="{Binding Tipo}" TextColor="Black" FontFamily="InterSemiBold" VerticalOptions="Center" HorizontalOptions="Center"/>
+                                            </Frame>
+
+                                            <BoxView Grid.Column="2"
+                                                 x:Name="StatusCircle"
+                                                 WidthRequest="10"
+                                                 HeightRequest="10"
+                                                 CornerRadius="5"
+                                                 HorizontalOptions="Center"
+                                                 VerticalOptions="Center"
+                                                 >
+                                                <BoxView.Triggers>
+                                                    <DataTrigger TargetType="BoxView" Binding="{Binding Status}" Value="1">
+                                                        <Setter Property="Color" Value="Green" />
+                                                    </DataTrigger>
+                                                    <DataTrigger TargetType="BoxView" Binding="{Binding Status}" Value="2">
+                                                        <Setter Property="Color" Value="Yellow" />
+                                                    </DataTrigger>
+                                                    <DataTrigger TargetType="BoxView" Binding="{Binding Status}" Value="3">
+                                                        <Setter Property="Color" Value="red" />
+                                                    </DataTrigger>
+                                                </BoxView.Triggers>
+                                            </BoxView>
+                                            <HorizontalStackLayout Grid.Column="0" Grid.Row="1" Spacing="15">
+                                                <VerticalStackLayout HorizontalOptions="Center">
+                                                    <ImageButton Source="detalhes.png" HeightRequest="24" WidthRequest="24" />
+                                                    <Label Text="Detalhes" FontSize="10" />
+                                                </VerticalStackLayout>
+                                                <VerticalStackLayout HorizontalOptions="Center">
+                                                    <ImageButton Source="visualizar.png"  HeightRequest="24" WidthRequest="24" />
+                                                    <Label Text="Visualizar"  FontSize="10"/>
+                                                </VerticalStackLayout>
+
+                                            </HorizontalStackLayout>
+
+
+                                        </Grid>
+                                    </StackLayout>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+
+                        <BoxView Color="#D9D9D9" Margin="0" HeightRequest="1" WidthRequest="200" />
+                        <Grid ColumnDefinitions="200,50" Padding="10">
+                            <Image Source="fire_seta.png" Grid.Column="0" HorizontalOptions="Start" HeightRequest="36" WidthRequest="43"/>
+
+                            <HorizontalStackLayout Grid.Column="1" Spacing="10">
+                                <Label Text="&lt;"/>
+                                <Label Text="1" />
+                                <Label Text="2" />
+                                <Label Text="3" />
+                                <Label Text=">" />
+                            </HorizontalStackLayout>
+                        </Grid>
+
+                    </VerticalStackLayout>
+                </HorizontalStackLayout>
+
+            </Grid>
+
+
+
+
+
+        </StackLayout>
     </VerticalStackLayout>
 </ContentPage>

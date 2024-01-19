@@ -66,5 +66,9 @@
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
+        <HorizontalStackLayout HeightRequest="100" HorizontalOptions="End" Margin="40,0">
+            <Label Text="Sair" VerticalOptions="End"/>
+            <Image Source="sair.png"  VerticalOptions="End"/>
+        </HorizontalStackLayout>
     </StackLayout>
 </ContentPage>

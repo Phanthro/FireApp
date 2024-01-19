@@ -62,6 +62,7 @@
 	  <None Remove="Resources\Images\carteira.svg" />
 	  <None Remove="Resources\Images\cert_icon.png" />
 	  <None Remove="Resources\Images\configuracao.svg" />
+	  <None Remove="Resources\Images\detalhes.svg" />
 	  <None Remove="Resources\Images\dolar_icon.svg" />
 	  <None Remove="Resources\Images\duvida.svg" />
 	  <None Remove="Resources\Images\fire_fogo.png" />
@@ -69,11 +70,13 @@
 	  <None Remove="Resources\Images\fire_seta.png" />
 	  <None Remove="Resources\Images\icon_user.svg" />
 	  <None Remove="Resources\Images\rautaki_logo.png" />
+	  <None Remove="Resources\Images\sair.svg" />
 	  <None Remove="Resources\Images\secure_icon.png" />
 	  <None Remove="Resources\Images\sign_icon.png" />
 	  <None Remove="Resources\Images\solicitacao.svg" />
 	  <None Remove="Resources\Images\transacao.svg" />
 	  <None Remove="Resources\Images\user.svg" />
+	  <None Remove="Resources\Images\visualizar.svg" />
 	  <None Remove="Resources\Images\whatsapp.svg" />
 	</ItemGroup>
 
@@ -119,10 +122,6 @@
 	  <MauiXaml Update="Views\Transacao.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Folder Include="ViewModels\" />
 	</ItemGroup>
 
 </Project>

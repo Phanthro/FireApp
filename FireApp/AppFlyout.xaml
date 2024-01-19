@@ -4,7 +4,7 @@
              x:Class="FireApp.AppFlyout"
              xmlns:views="clr-namespace:FireApp.Views"
             Shell.FlyoutWidth="200"
-            FlyoutLayoutBehavior="Popover"
+            FlyoutLayoutBehavior="Default"
             >
     <FlyoutPage.Flyout>
         <views:FlyoutMenu x:Name="flyoutPage" />
