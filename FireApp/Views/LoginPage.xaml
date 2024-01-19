@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:custom="clr-namespace:FireApp.CustomControls"
+             x:Class="FireApp.Views.LoginPage"
+             Title="LoginPage"
+             >
+    <VerticalStackLayout>
+        <StackLayout HorizontalOptions="Center" Margin="0,30,0,0">
+            <HorizontalStackLayout Spacing="130" HorizontalOptions="Center">
+                <Image Source="fire_logo.png" HeightRequest="43" WidthRequest="154"/>
+                <Image Source="fire_seta.png" HeightRequest="40" HorizontalOptions="End" />
+            </HorizontalStackLayout>
+            <VerticalStackLayout Spacing="20" Padding="40">
+                <custom:StandardEntry 
+                    Placeholder="Login" 
+                    BorderThickness="0" 
+                    BorderColor="black" 
+                    BackgroundColor="#EDEDED" 
+                    CustomHeight="32" 
+                    WidthRequest="225"
+                    PlaceholderColor="black"></custom:StandardEntry>
+
+                <custom:StandardEntry 
+                    Placeholder="Senha"
+                    IsPassword="True"
+                    BorderThickness="0" 
+                    BorderColor="black" 
+                    BackgroundColor="#EDEDED" 
+                    WidthRequest="225"
+                    CustomHeight="32" 
+                    PlaceholderColor="black"></custom:StandardEntry>
+
+                <Button 
+                    Text="Entrar" 
+                    CornerRadius="10" 
+                    BackgroundColor="#ed6e33" 
+                    WidthRequest="120" 
+                    HeightRequest="35" 
+                    Padding="0" 
+                    FontSize="14" 
+                    FontFamily="InterBold"
+                    Clicked="Button_Clicked"
+                    />
+            </VerticalStackLayout>
+        </StackLayout>
+        <StackLayout HeightRequest="75" HorizontalOptions="FillAndExpand">
+            <Grid>
+                <Image ZIndex="1" Source="bg_01.png" VerticalOptions="FillAndExpand" />
+                <HorizontalStackLayout ZIndex="2" HorizontalOptions="Center" Spacing="30">
+                    <Image ZIndex="2" Source="sign_icon.png" HeightRequest="75" >
+                        <Image.Shadow>
+                            <Shadow Brush="Black"
+                                Offset="0,10"
+                                Radius="10"
+                                Opacity="0.25" />
+                        </Image.Shadow>
+                    </Image>
+                    <Image ZIndex="2" Source="cert_icon.png" HeightRequest="75" >
+                        <Image.Shadow>
+                            <Shadow Brush="Black"
+                                Offset="0,10"
+                                Radius="10"
+                                Opacity="0.25" />
+                        </Image.Shadow>
+                    </Image>
+                    <Image ZIndex="2" Source="secure_icon.png" HeightRequest="75">
+                        <Image.Shadow>
+                            <Shadow Brush="Black"
+                                Offset="0,10"
+                                Radius="10"
+                                Opacity="0.25" />
+                        </Image.Shadow>
+                    </Image>
+                </HorizontalStackLayout>
+            </Grid>
+
+            <VerticalStackLayout BackgroundColor="#e8e8e9" Padding="50,10">
+                <HorizontalStackLayout Spacing="5">
+                    <Image Source="fire_fogo.png" HeightRequest="30" VerticalOptions="Center"/>
+                    <Label Text="Assinatura Digital" VerticalOptions="Center" FontFamily="InterBold"/>
+                </HorizontalStackLayout>
+                <HorizontalStackLayout Spacing="5" Margin="40,20,0,0">
+                    <Image Source="fire_fogo.png" HeightRequest="30" VerticalOptions="Center"/>
+                    <Label Text="Certidões Fiscais" VerticalOptions="Center" FontFamily="InterBold"/>
+                </HorizontalStackLayout>
+                <HorizontalStackLayout Spacing="5" Margin="80,20,0,0">
+                    <Image Source="fire_fogo.png" HeightRequest="30" VerticalOptions="Center"/>
+                    <Label Text="Certificação de Documento" VerticalOptions="Center" FontFamily="InterBold"/>
+                </HorizontalStackLayout>
+                
+                <VerticalStackLayout Margin="0,30" Spacing="10" HeightRequest="300">
+                    <BoxView Color="#606060" Margin="0,0,0,0" HeightRequest="1" WidthRequest="200" />
+                    <Label Text="Ajuda" HorizontalOptions="Center" TextColor="#606060"/>
+                    <Label Text="Esqueceu a senha?" HorizontalOptions="Center" TextColor="#606060"/>
+                    <HorizontalStackLayout HorizontalOptions="Center">
+                        <Label Text="Novo usuário? " HorizontalOptions="Center" TextColor="#606060"/>
+                        <Label Text="Cadastre-se" HorizontalOptions="Center" TextColor="#606060" TextDecorations="Underline"/>
+                    </HorizontalStackLayout>
+                    <BoxView Color="#606060" Margin="0,0,0,0" HeightRequest="1" WidthRequest="200" />
+                </VerticalStackLayout>
+            </VerticalStackLayout>
+            
+        </StackLayout>
+    </VerticalStackLayout>
+
+</ContentPage>

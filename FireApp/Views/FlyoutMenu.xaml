@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FireApp.Views.FlyoutMenu"
+             Title="FlyoutMenu"
+             xmlns:dto="clr-namespace:FireApp.Dto"
+             xmlns:Views="clr-namespace:FireApp.Views"
+             >
+    <StackLayout>
+        <StackLayout BackgroundColor="AliceBlue" HorizontalOptions="Start">
+
+            <Image Source="fire_logo_cinza.png" WidthRequest="115" />
+
+        </StackLayout>
+
+        <CollectionView x:Name="collectionView"
+                x:FieldModifier="public"
+                SelectionMode="Single">
+            <CollectionView.ItemsSource>
+                <x:Array Type="{x:Type dto:FlyoutPageItem}">
+
+                    <dto:FlyoutPageItem Title="Carteira"
+                        IconSource="carteira.png"
+                        TargetType="{x:Type Views:Carteira}" />
+                    <dto:FlyoutPageItem Title="Transações"
+                        IconSource="transacao.png"
+                        TargetType="{x:Type Views:Transacao}" />
+                    <dto:FlyoutPageItem Title="Agendamento"
+                        IconSource="calendar.png"
+                        TargetType="{x:Type Views:Agendamentos}" />
+                    <dto:FlyoutPageItem Title="Solicitações"
+                        IconSource="Solicitacao.png"
+                        TargetType="{x:Type Views:Solicitacoes}" />
+                    <dto:FlyoutPageItem Title="Dúvidas"
+                        IconSource="duvida.png"
+                        TargetType="{x:Type Views:Duvidas}" />
+                    <dto:FlyoutPageItem Title="Configurações"
+                        IconSource="configuracao.png"
+                        TargetType="{x:Type Views:Configuracoes}" />
+                    <dto:FlyoutPageItem Title="Conta"
+                        IconSource="icon_user.png"
+                        TargetType="{x:Type Views:Conta}" />
+                    <dto:FlyoutPageItem Title="Centra de Atendimento"
+                        IconSource="atendimento.png"
+                        TargetType="{x:Type Views:CentralAtendimento}" />
+
+                </x:Array>
+            </CollectionView.ItemsSource>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Padding="25,10" BackgroundColor="White" Margin="0,5" VerticalOptions="End">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="18"/>
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Image Source="{Binding IconSource}" />
+                        <Label Grid.Column="1"
+                               Margin="10,0"
+                               Text="{Binding Title}"
+                               FontSize="14"
+                               FontAttributes="Bold"
+                               VerticalOptions="Center"
+                               FontFamily="InterSemiBold"
+                               />
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </StackLayout>
+</ContentPage>

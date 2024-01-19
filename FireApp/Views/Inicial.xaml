@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FireApp.Views.Inicial"
+             xmlns:custom="clr-namespace:FireApp.CustomControls"
+             Title="Inicial">
+    <VerticalStackLayout>
+        <StackLayout HorizontalOptions="Center" Margin="0,30,0,0">
+            <HorizontalStackLayout Spacing="30" HorizontalOptions="Center">
+                <Image Source="fire_logo_cinza.png" HeightRequest="32" WidthRequest="115" />
+                <BoxView Color="#606060" Margin="0,0,0,0" HeightRequest="30" WidthRequest="1" />
+                <Image Source="rautaki_logo.png"  HeightRequest="32" WidthRequest="107"/>
+
+            </HorizontalStackLayout>
+            <HorizontalStackLayout Padding="20" HorizontalOptions="Center" Spacing="150" Margin="0,30,0,0">
+                <HorizontalStackLayout>
+                    <Image Source="icon_user.png" WidthRequest="12.44" HeightRequest="16" Margin="10"/>
+                    <VerticalStackLayout>
+                        <Label Text="Rodrigo Moreira" FontFamily="InterSemiBold" TextColor="#606060"/>
+                        <Label Text="Adm" TextColor="#606060"/>
+                    </VerticalStackLayout>
+                </HorizontalStackLayout>
+                <ImageButton Source="buger_ibo.png" WidthRequest="33" HeightRequest="23" Clicked="ImageButton_Clicked"/>
+
+
+
+            </HorizontalStackLayout>
+        </StackLayout>
+        <StackLayout>
+            <Grid Margin="0">
+
+                <Image ZIndex="1" Source="bg_01.png" VerticalOptions="FillAndExpand" />
+
+                <HorizontalStackLayout ZIndex="2" Spacing="130" Padding="20" HorizontalOptions="Center" >
+                    <StackLayout>
+                        <Frame BackgroundColor="#979797" CornerRadius="2" HeightRequest="30" WidthRequest="87" Padding="3">
+                            <Label Text="Certidões" TextColor="White" FontFamily="InterSemiBold" VerticalOptions="Center" HorizontalOptions="Center"/>
+                        </Frame>
+                    </StackLayout>
+                    <VerticalStackLayout>
+                        <StackLayout Orientation="Horizontal" Spacing="3">
+                            <Image Source="dolar_icon.png" WidthRequest="16" HeightRequest="16" />
+                            <Label Text="Créditos" TextColor="#606060" FontFamily="InterSemiBold" FontSize="12" />
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" Spacing="3">
+                            <Label Text="R$" FontFamily="InterRegular" TextColor="#606060" FontSize="12"/>
+                            <Label Text="000,00" FontFamily="InterRegular" TextColor="#606060" FontSize="12"/>
+                        </StackLayout>
+                    </VerticalStackLayout>
+                </HorizontalStackLayout>
+                
+            </Grid>
+            <VerticalStackLayout BackgroundColor="#e8e8e9" Padding="50,0,50,20" Spacing="15" Margin="0,-30,0,0">
+                <Label Text="Solicitar certidão:" HorizontalOptions="Center" FontFamily="InterSemiBold" FontSize="14"/>
+                <custom:StandardEntry 
+                    Placeholder="Identidade" 
+                    BorderThickness="0" 
+                    BorderColor="black" 
+                    BackgroundColor="White" 
+                    CustomHeight="32" 
+                    WidthRequest="285"
+                    PlaceholderColor="#606060"></custom:StandardEntry>
+                <custom:StandardEntry 
+                    Placeholder="CNPJ" 
+                    BorderThickness="0" 
+                    BorderColor="black" 
+                    BackgroundColor="White" 
+                    CustomHeight="32" 
+                    WidthRequest="285"
+                    PlaceholderColor="#606060"></custom:StandardEntry>
+                <custom:StandardEntry 
+                    Placeholder="CPF" 
+                    BorderThickness="0" 
+                    BorderColor="black" 
+                    BackgroundColor="White" 
+                    CustomHeight="32" 
+                    WidthRequest="285"
+                    PlaceholderColor="#606060"></custom:StandardEntry>
+                <Button 
+                    Text="Solicitar"
+                    BackgroundColor="Black"
+                    TextColor="White"
+                    CornerRadius="2"
+                    FontFamily="InterSemiBold"
+                    WidthRequest="130"
+                    HeightRequest="34"
+                    Padding="0"
+                    FontSize="14"
+                    />
+                <BoxView Color="#D9D9D9" Margin="0,15,0,0" HeightRequest="1" WidthRequest="200" />
+            </VerticalStackLayout>
+            <StackLayout BackgroundColor="#e8e8e9" HeightRequest="400">
+                
+                <Grid RowDefinitions="Auto, Auto" ColumnDefinitions="Auto, Auto" HorizontalOptions="Center" RowSpacing="25" ColumnSpacing="20">
+
+                    <Button Text="Adicionar crédito" Grid.Column="0" Grid.Row="0" BackgroundColor="#606060" CornerRadius="2" HeightRequest="50" WidthRequest="130" Padding="3"/>
+                    <Button Text="Certidões emitidas" Grid.Column="1" Grid.Row="0" BackgroundColor="#606060" CornerRadius="2" HeightRequest="50" WidthRequest="130" Padding="3"/>
+                    <Button Text="Comper sua certidão" Grid.Column="0" Grid.Row="1" BackgroundColor="#606060" CornerRadius="2" HeightRequest="50" WidthRequest="130" Padding="3"/>
+                    <Button Text="Nova certidão" Grid.Column="1" Grid.Row="1" BackgroundColor="#606060" CornerRadius="2" HeightRequest="50" WidthRequest="130" Padding="3"/>
+                </Grid>
+            </StackLayout>
+
+
+
+        </StackLayout>
+    </VerticalStackLayout>
+</ContentPage>
