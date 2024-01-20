@@ -106,7 +106,7 @@
                                 <Label Text="1" />
                                 <Label Text="2" />
                                 <Label Text="3" />
-                                <Label Text=">" />
+                                <Label Text="&gt;" />
                             </HorizontalStackLayout>
                         </Grid>
 

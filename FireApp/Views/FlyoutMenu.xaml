@@ -7,9 +7,9 @@
              xmlns:Views="clr-namespace:FireApp.Views"
              >
     <StackLayout>
-        <StackLayout BackgroundColor="AliceBlue" HorizontalOptions="Start">
+        <StackLayout HorizontalOptions="Start" Margin="15">
 
-            <Image Source="fire_logo_cinza.png" WidthRequest="115" />
+            <Image Source="fire_logo_cinza.png" WidthRequest="154" />
 
         </StackLayout>
 

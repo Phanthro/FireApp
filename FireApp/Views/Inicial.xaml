@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FireApp.Views.Inicial"
              xmlns:custom="clr-namespace:FireApp.CustomControls"
-             Title="Inicial">
+             Title="Inicial"
+             >
     <VerticalStackLayout>
         <StackLayout HorizontalOptions="Center" Margin="0,30,0,0">
             <HorizontalStackLayout Spacing="30" HorizontalOptions="Center">
@@ -95,7 +96,7 @@
 
                     <Button Text="Adicionar crédito" Grid.Column="0" Grid.Row="0" BackgroundColor="#606060" CornerRadius="2" HeightRequest="50" WidthRequest="130" Padding="3"/>
                     <Button Text="Certidões emitidas" Grid.Column="1" Grid.Row="0" BackgroundColor="#606060" CornerRadius="2" HeightRequest="50" WidthRequest="130" Padding="3"/>
-                    <Button Text="Comper sua certidão" Grid.Column="0" Grid.Row="1" BackgroundColor="#606060" CornerRadius="2" HeightRequest="50" WidthRequest="130" Padding="3"/>
+                    <Button Text="Compre sua certidão" Grid.Column="0" Grid.Row="1" BackgroundColor="#606060" CornerRadius="2" HeightRequest="50" WidthRequest="130" Padding="3"/>
                     <Button Text="Nova certidão" Grid.Column="1" Grid.Row="1" BackgroundColor="#606060" CornerRadius="2" HeightRequest="50" WidthRequest="130" Padding="3"/>
                 </Grid>
             </StackLayout>
